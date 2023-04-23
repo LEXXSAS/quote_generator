@@ -1,7 +1,7 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap'); */
 
 :root {
-  --primary: #A84FFF;
+  --primary: #D81E5B;
   --secondary: #D81E5B;
   --dark: #131A26;
   --light: #EEEEEE;
@@ -85,11 +85,33 @@ blockquote {
 .p {
   white-space: pre-wrap;
 }
+
+/* .btn {
+  height: 45px;
+  padding: 0 30px;
+  border: 0;
+  border-radius: 10px;
+  margin-right: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.btn:active {
+  transform: translateY(2px);
+  box-shadow: none;
+}
+.btn_generate {
+  background-color: #00C8A4;
+  color: #fff;
+  box-shadow: 0 3px 0 #00A98B;
+  border: 1px solid #00A98B;
+} */
+
 button {
   appearance: none;
   border: none;
   outline: none;
-
+  box-shadow: 0 3px 0 #911c43;
   background-color: var(--primary);
   color: #fff;
   padding: 0.75rem 1.5rem;
@@ -100,11 +122,17 @@ button {
   font-size: 1.5rem;
   font-weight: 700;
   cursor: pointer;
+  border: 1px solid #911c43;
+  transition: all 0.15s ease;
 
-  transition: all 0.2 ease-in-out;
 }
 button:hover {
   background-color: var(--secondary);
+}
+
+button:active {
+  transform: translateY(2px);
+  box-shadow: none;
 }
 
 @media (max-width: 600px) {
@@ -141,13 +169,19 @@ button:hover {
   }
 }
 
+@media (max-width: 414px) {
+  button {
+    padding: 0.75rem 1rem;
+  }
+}
+
 @media (max-width: 400px) {
   blockquote {
     font-size: 1.3rem;
     padding: 2.3rem;
   }
   button {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
   .title,
   .character {
@@ -165,6 +199,7 @@ button:hover {
   }
   button {
     font-size: 1rem;
+    padding: 0.65rem 0.5rem;
   }
   .title,
   .character {
